@@ -19,10 +19,11 @@ Route::post('/login', [AuthController::class, 'login'])
 
 // Projets  
 
+// Projets
 Route::get('/projets', [ProjetsController::class, 'index'])->name('projets.index');
-Route::get('/projets/show', [ProjetsController::class, 'show'])->name('projets.show');
-Route::post('/projets/store', [ProjetsController::class, 'store'])->name('projets.store');
-Route::post('/projets/edit', [ProjetsController::class, 'edit'])->name('projets.edit');
-Route::put('/projets/update', [ProjetsController::class, 'update'])->name('projets.update');
-Route::delete('/projets/destroy', [ProjetsController::class, 'destroy'])->name('projets.destroy');
-Route::patch('/projets/updatestatut', [ProjetsController::class, 'changeStatut'])->name('projets.updatestatut');
+Route::get('/projets/user', [ProjetsController::class, 'show'])->name('projets.user');
+Route::post('/projets', [ProjetsController::class, 'store'])->name('projets.store'); 
+Route::post('/projets/edit', [ProjetsController::class, 'edit'])->name('projets.edit'); 
+Route::put('/projets', [ProjetsController::class, 'update'])->name('projets.update');
+Route::delete('/projets', [ProjetsController::class, 'destroy'])->name('projets.destroy');
+Route::patch('/projets/statut', [ProjetsController::class, 'updateStatut'])->name('projets.updatestatut'); 
