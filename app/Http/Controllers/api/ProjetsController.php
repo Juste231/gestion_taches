@@ -291,7 +291,7 @@ class ProjetsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function delete(Request $request)
+    public function destroy(Request $request)
 {
     // Validation de l'ID du projet envoyé dans la requête
     $request->validate([
